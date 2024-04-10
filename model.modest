@@ -101,24 +101,24 @@ process LinearBattery()
     do {
         alt {
             // Battery not empty
-            :: when (battery_charge > BATTERY_EMPTY) 
+        :: when (battery_charge > BATTERY_EMPTY) 
             alt {
-                :: updateUhf {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: updateSun {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: update3F2 {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: update3F3 {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: updateXT  {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: updateXK  {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateUhf {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateSun {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: update3F2 {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: update3F3 {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateXT  {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateXK  {= battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
             }
             // Battery empty
-            :: when (battery_charge < BATTERY_EMPTY) 
+        :: when (battery_charge < BATTERY_EMPTY) 
             alt {
-                :: updateUhf {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: updateSun {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: update3F2 {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: update3F3 {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: updateXT {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
-                :: updateXK {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateUhf {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateSun {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: update3F2 {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: update3F3 {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateXT {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
+            :: updateXK {= cost += COST_BAD, battery_charge = BatteryCharge(), last_load = battery_load, last_time = current_time =}
             }
         }
     }
@@ -247,11 +247,14 @@ process XBandKourou()
 
 par
 {
-    :: LinearBattery()
-    :: Sun()
-    :: Uhf()
-    :: LBand3F2()
-    :: LBand3F3()
-    :: XBandToulou()
-    :: XBandKourou()
+:: LinearBattery()
+:: Sun()
+:: Uhf()
+:: LBand3F2()
+:: LBand3F3()
+:: XBandToulou()
+:: XBandKourou()
 }
+
+
+Ligengrun
