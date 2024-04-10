@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------
+每个process和battery的load要改，全部都要替换，现在是battery_load, 换成load
+在每个process里面要更新时间，两个时间
+
+
+
+
+
+
+
+-----------
+TO DO
+cost 函数合并
+job clock，局部计时器
+
+
+全部顺序process的，battery放在最后面
+变量名，变量声明的调整（名字和参数大小）
+Time Interval数组要调整
+参数大小的调整，包括warm up时间，slewing的，power和consumption的大小，要乘上60秒
