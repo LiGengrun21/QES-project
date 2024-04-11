@@ -32,3 +32,4 @@ job clock，局部计时器
 变量名，变量声明的调整（名字和参数大小）
 Time Interval数组要调整
 参数大小的调整，包括warm up时间，slewing的，power和consumption的大小，要乘上60秒
+UHF的skip逻辑与pently
